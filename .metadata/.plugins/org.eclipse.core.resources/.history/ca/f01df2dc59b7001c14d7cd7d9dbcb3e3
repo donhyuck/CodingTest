@@ -1,0 +1,14 @@
+package Joystick;
+
+class Solution {
+
+	public static void main(String[] args) {
+		Solution so = new Solution();
+		so.solution(11);
+	}
+
+	public int solution(String name) {
+		int answer = 0;
+		return answer;
+	}
+}

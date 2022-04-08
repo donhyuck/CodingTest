@@ -1,0 +1,15 @@
+package Joystick;
+
+class Solution {
+
+	public static void main(String[] args) {
+		Solution so = new Solution();
+		int num = so.solution("aa");
+		System.out.println(id);
+	}
+
+	public int solution(String name) {
+		int answer = 0;
+		return answer;
+	}
+}
