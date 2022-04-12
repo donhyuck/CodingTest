@@ -1,4 +1,4 @@
-package Joystick;
+package Greedy.Joystick;
 
 class Solution {
 
