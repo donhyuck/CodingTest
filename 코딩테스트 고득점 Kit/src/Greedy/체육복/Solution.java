@@ -1,4 +1,4 @@
-package Greedy.Ã¼À°º¹;
+package Greedy.ì²´ìœ¡ë³µ;
 
 public class Solution {
 
