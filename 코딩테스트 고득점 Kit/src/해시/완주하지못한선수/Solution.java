@@ -32,53 +32,16 @@ class Solution {
 
 	public String solution(String[] participantList, String[] completionList) {
 
-		String answer = "";
+		Arrays.sort(participantList);
+		Arrays.sort(completionList);
 
-		for (int i = 0; i < participantList.length; i++) {
-
-			if (isContainedCompletion(participantList[i], completionList) == false) {
-				return participantList[i];
+		int index = 0;
+		for (index = 0; index < participantList.length - 1; index++) {
+			if (!participantList[index].equals(completionList[index])) {
+				return participantList[index];
 			}
 		}
 
-		answer = findSameName(participantList);
-
-		return answer;
-	}
-
-	private boolean isContainedCompletion(String participant, String[] completionList) {
-
-		for (int i = 0; i < completionList.length; i++) {
-
-			if (completionList[i].equals(participant)) {
-				return true;
-			}
-		}
-
-		return false;
-	}
-
-	private String findSameName(String[] participantList) {
-
-		String sameName = "";
-
-		for (int i = 0; i < participantList.length; i++) {
-			if (isSameName(participantList[i], participantList)) {
-				return participantList[i];
-			}
-
-		}
-
-		return sameName;
-	}
-
-	private boolean isSameName(String participant, String[] participantList) {
-
-		for (int i = 0; i < participantList.length; i++) {
-			if (participant.equals(participantList[i])) {
-				return true;
-			}
-		}
-		return false;
+		return participantList[index];
 	}
 }
