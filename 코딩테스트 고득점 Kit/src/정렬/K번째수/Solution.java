@@ -23,17 +23,17 @@ class Solution {
 
 		for (int i = 0; i < commands.length; i++) {
 
-			// 첫번째값에서 두번째값자른 값만큼의 test배열을 선언한다.
+			// 첫번째값에서 두번째값자른 크기만큼의 test배열을 선언한다.
 			int[] test = new int[(commands[i][1] - commands[i][0]) + 1];
 
 			for (int j = 0; j < test.length; j++) {
-				// test배열을 기준으로 array배열을 나눈다.
+				// 기존의 array배열에서 test배열로 넣는다.
 				test[j] = array[j + commands[i][0] - 1];
 			}
 
 			// 새롭게 정렬된 array배열
 			Arrays.sort(test);
-			
+
 			// array배열의 k번째수를 구한다.
 			answer[i] = test[commands[i][2] - 1];
 		}
