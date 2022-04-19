@@ -22,6 +22,10 @@ class Solution {
 
 	public String solution(int[] numbers) {
 		String answer = "";
+		
+		for (int i : numbers) {
+			answer += i;
+		}
 		return answer;
 	}
 }
